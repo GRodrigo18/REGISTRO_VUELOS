@@ -308,7 +308,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         Btn_Eliminar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) 
             {
-               
+               Eliminar();
             }
         });
         add(Btn_Eliminar);
@@ -320,7 +320,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         Btn_Salir.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) 
             {
-             
+                Salir();
             }
         });
         add(Btn_Salir);
