@@ -248,22 +248,10 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         });
         add(Btn_Agregar);
         
-        Btn_Cancelar=new JButton("Cancelar");
-        Btn_Cancelar.setBounds(750, 80, 180,50);
-        Btn_Cancelar.setBackground(new java.awt.Color(102, 153, 255));
-        Btn_Cancelar.setFont(new java.awt.Font("Roboto Light", 3, 18));
-        Btn_Cancelar.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) 
-            {
-                Cancelar();
-            }
-        });
-        add(Btn_Cancelar);
-        
         Btn_Buscar=new JButton("Buscar");
-        Btn_Buscar.setBounds(750, 155, 180,50);
+        Btn_Buscar.setBounds(750, 80, 180,50);
         Btn_Buscar.setBackground(new java.awt.Color(102, 153, 255));
-        Btn_Buscar.setFont(new java.awt.Font("Roboto Light", 3, 18));;
+        Btn_Buscar.setFont(new java.awt.Font("Roboto Light", 3, 18));
         Btn_Buscar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) 
             {
@@ -272,11 +260,23 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         });
         add(Btn_Buscar);
         
+        Btn_Cancelar=new JButton("Cancelar");
+        Btn_Cancelar.setBounds(750, 155, 180,50);
+        Btn_Cancelar.setBackground(new java.awt.Color(102, 153, 255));
+        Btn_Cancelar.setFont(new java.awt.Font("Roboto Light", 3, 18));;
+        Btn_Cancelar.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) 
+            {
+                Cancelar();
+            }
+        });
+        add(Btn_Cancelar);
+        
         Btn_boleta=new JButton("BOLETA");
-        Btn_Buscar.setBounds(550, 300, 180,45);
-        Btn_Buscar.setBackground(new java.awt.Color(153, 204, 255));
-        Btn_Buscar.setFont(new java.awt.Font("Roboto Light", 3, 18));
-        Btn_Buscar.addActionListener(new ActionListener() {
+        Btn_boleta.setBounds(550, 300, 180,45);
+        Btn_boleta.setBackground(new java.awt.Color(153, 204, 255));
+        Btn_boleta.setFont(new java.awt.Font("Roboto Light", 3, 18));
+        Btn_boleta.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) 
             {
                 frm_Boleta pn = new frm_Boleta();
@@ -284,7 +284,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
                 dispose();
             }
         });
-        add(Btn_Buscar);
+        add(Btn_boleta);
         
         
         Btn_imprimir=new JButton("IMPRIMIR");
@@ -489,11 +489,11 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
     {
         //6.Implemente el metodo que al recibir un nodo verifique que no este vacio 
         // y carge el contenido del nodo en los controles
-        String Tipd=cbotipodocu.getSelectedItem().toString();
+      
         if(Auxiliar != null)
         {
             
-            
+           
             txtnumdocu.setText(Auxiliar.getElemento().getNumdocu());
             txtpasaporte.setText(Auxiliar.getElemento().getPasaporte());
             txtnombres.setText(Auxiliar.getElemento().getNombres());
@@ -583,15 +583,8 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         if (fila != -1)
         {
             String Cadena= ModTabla.getValueAt(fila, 0)+ " "+
-                           ModTabla.getValueAt(fila, 1)+ " "+
-                           ModTabla.getValueAt(fila, 2)+ " "+
-                           ModTabla.getValueAt(fila, 3)+ " "+
-                           ModTabla.getValueAt(fila, 4)+ " "+
-                           ModTabla.getValueAt(fila, 5)+ " "+
-                           ModTabla.getValueAt(fila, 6)+ " "+
-                           ModTabla.getValueAt(fila, 7)+ " "+
-                           ModTabla.getValueAt(fila, 8)+ " "+
-                           ModTabla.getValueAt(fila, 9)+ " ";
+                           ModTabla.getValueAt(fila, 1)
+                           ;
             objArbol.setRaiz(objArbol.Eliminar(objArbol.getRaiz(), Cadena));
             Limpiar_Tabla();
             objArbol.Listar_InOrder(objArbol.getRaiz(), ModTabla);
