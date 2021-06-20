@@ -12,6 +12,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import static javax.swing.JOptionPane.showMessageDialog;
 public class frm_Registro_vuelo extends JFrame implements Runnable{
 
     String hora,minutos,segundos;
@@ -582,13 +583,23 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         int fila = Tbl_Datos.getSelectedRow();
         if (fila != -1)
         {
+              
             String Cadena= ModTabla.getValueAt(fila, 0)+ " "+
-                           ModTabla.getValueAt(fila, 1)
+                           ModTabla.getValueAt(fila, 1)+ " "+
+                           ModTabla.getValueAt(fila, 2)+ " "+
+                           ModTabla.getValueAt(fila, 3)+ " "+
+                           ModTabla.getValueAt(fila, 4)+ " "+
+                           ModTabla.getValueAt(fila, 5)+ " "+
+                           ModTabla.getValueAt(fila, 6)+ " "+
+                           ModTabla.getValueAt(fila, 7)+ " "+
+                           ModTabla.getValueAt(fila, 8)+ " "+
+                           ModTabla.getValueAt(fila, 9)
                            ;
             objArbol.setRaiz(objArbol.Eliminar(objArbol.getRaiz(), Cadena));
             Limpiar_Tabla();
             objArbol.Listar_InOrder(objArbol.getRaiz(), ModTabla);
         }
+        
     }
     //BOTON SALIR
     public void Salir()
