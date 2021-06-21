@@ -69,7 +69,7 @@ public class frm_Login extends JFrame implements ActionListener{
         
         String Pass = new String(txtContra.getPassword());
         if(txTUser.getText().equals(Usuario)&& Pass.equals(Contraseña)){
-            frm_Registro_vuelo pn = new frm_Registro_vuelo();
+            Menu pn = new Menu();
             pn.setVisible(true);
             dispose();
         }
