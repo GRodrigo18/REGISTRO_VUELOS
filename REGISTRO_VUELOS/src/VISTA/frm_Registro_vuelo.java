@@ -360,7 +360,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         Tbl_Datos.setModel(ModTabla);
         
         barra.setViewportView(Tbl_Datos);
-        barra.setBounds(50,490,900,250);
+        barra.setBounds(50,490,930,300);
         add(barra);         
     }
     public static String fecha()
