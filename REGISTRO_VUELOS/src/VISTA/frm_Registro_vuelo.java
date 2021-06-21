@@ -36,89 +36,89 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
     }
      public void iniComponets()
     {
-        setSize(950, 900);
-        setTitle("ventana Principal");
+        setSize(950, 850);
+        setTitle("-REGISTRO VUELOS-");
         setLayout(null);
         
         
         lbln1 =new JLabel("REGISTRO DE VUELOS");
-        lbln1.setBounds(250, 10, 400, 50);
+        lbln1.setBounds(300, 10, 400, 50);
         lbln1.setForeground(new java.awt.Color(51, 102, 255));
         lbln1.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 30));
         add(lbln1);
         
         lbln2 =new JLabel("TIPO DE DOCUMENTO:");
         lbln2.setBounds(50, 70, 200, 30);
-        lbln2.setFont(new java.awt.Font("Sitka Subheading", 3, 16));
+        lbln2.setFont(new java.awt.Font("Sitka Subheading", 3, 17));
         add(lbln2);
         
         lbln3 =new JLabel("NÚMERO DE DOCUMENTO:");
         lbln3.setBounds(50, 110, 250, 30);
-        lbln3.setFont(new java.awt.Font("Sitka Subheading", 3, 16));
+        lbln3.setFont(new java.awt.Font("Sitka Subheading", 3, 17));
         add(lbln3);
         
         lbln4 =new JLabel("PASAPORTE:");
         lbln4.setBounds(50, 150, 200, 30);
-        lbln4.setFont(new java.awt.Font("Sitka Subheading", 3, 16));
+        lbln4.setFont(new java.awt.Font("Sitka Subheading", 3, 17));
         add(lbln4);
         
         lbl5 =new JLabel("NOMBRES:");
         lbl5.setBounds(50, 190, 200, 30);
-        lbl5.setFont(new java.awt.Font("Sitka Subheading", 3, 16));
+        lbl5.setFont(new java.awt.Font("Sitka Subheading", 3, 17));
         add(lbl5);
         
         lbl6 =new JLabel("APELLIDOS:");
         lbl6.setBounds(50, 230, 200, 30);
-        lbl6.setFont(new java.awt.Font("Sitka Subheading", 3, 16));
+        lbl6.setFont(new java.awt.Font("Sitka Subheading", 3, 17));
         add(lbl6);
         
         lbl7 =new JLabel("SEXO:");
         lbl7.setBounds(50, 270, 200, 30);
-        lbl7.setFont(new java.awt.Font("Sitka Subheading", 3, 16));
+        lbl7.setFont(new java.awt.Font("Sitka Subheading", 3, 17));
         add(lbl7);
         
         lbl8 =new JLabel("ORIGEN:");
         lbl8.setBounds(50, 310, 200, 30);
-        lbl8.setFont(new java.awt.Font("Sitka Subheading", 3, 16));
+        lbl8.setFont(new java.awt.Font("Sitka Subheading", 3, 17));
         add(lbl8);
         
         lbl9 =new JLabel("DESTINO:");
         lbl9.setBounds(50, 350, 200, 30);
-        lbl9.setFont(new java.awt.Font("Sitka Subheading", 3, 16));
+        lbl9.setFont(new java.awt.Font("Sitka Subheading", 3, 17));
         add(lbl9);
         
         lbl10 =new JLabel("FECHA DE SALIDA:");
         lbl10.setBounds(50, 390, 500, 30);
-        lbl10.setFont(new java.awt.Font("Sitka Subheading", 3, 16));
+        lbl10.setFont(new java.awt.Font("Sitka Subheading", 3, 17));
         add(lbl10);
          
         lbl11 =new JLabel("FECHA DE RETORNO:");
         lbl11.setBounds(50, 430, 500, 30);
-        lbl11.setFont(new java.awt.Font("Sitka Subheading", 3, 16));
+        lbl11.setFont(new java.awt.Font("Sitka Subheading", 3, 17));
         add(lbl11);
         
         lblfcha =new JLabel("FECHA");
-        lblfcha.setBounds(550, 370, 180,45);
+        lblfcha.setBounds(550, 65, 180,45);
         lblfcha.setForeground(new java.awt.Color(0, 102, 102));
-        lblfcha.setFont(new java.awt.Font("Roboto Light", 3, 16));
+        lblfcha.setFont(new java.awt.Font("Roboto Light", 3, 17));
         add(lblfcha);
         
         lblhora =new JLabel("HORA");
-        lblhora.setBounds(750, 370, 180,45);
+        lblhora.setBounds(750, 65, 180,45);
         lblhora.setForeground(new java.awt.Color(0, 102, 102));
-        lblhora.setFont(new java.awt.Font("Roboto Light", 3, 16));
+        lblhora.setFont(new java.awt.Font("Roboto Light", 3, 17));
         add(lblhora);
         
         lblfechactual =new JLabel("DO/MM/YYYY");
-        lblfechactual.setBounds(550, 400, 180,45);
+        lblfechactual.setBounds(550, 95, 180,45);
         lblfechactual.setForeground(new java.awt.Color(0, 102, 102));
-        lblfechactual.setFont(new java.awt.Font("Roboto Light", 3, 16));
+        lblfechactual.setFont(new java.awt.Font("Roboto Light", 3, 17));
         add(lblfechactual);
         
         lblhoraactual =new JLabel("00:00:00");
-        lblhoraactual.setBounds(750, 400, 180,45);
+        lblhoraactual.setBounds(750, 95, 180,45);
         lblhoraactual.setForeground(new java.awt.Color(0, 102, 102));
-        lblhoraactual.setFont(new java.awt.Font("Roboto Light", 3, 16));
+        lblhoraactual.setFont(new java.awt.Font("Roboto Light", 3, 17));
         add(lblhoraactual);
         
         txtnumdocu=new JTextField();
@@ -225,7 +225,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         
         
         Btn_nuevo=new JButton("Nuevo");
-        Btn_nuevo.setBounds(500, 80, 180,50);
+        Btn_nuevo.setBounds(500, 230, 180,50);
         Btn_nuevo.setBackground(new java.awt.Color(102, 153, 255));
         Btn_nuevo.setFont(new java.awt.Font("Roboto Light", 3, 18));
         Btn_nuevo.addActionListener(new ActionListener() {
@@ -249,7 +249,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         add(Btn_Agregar);
         
         Btn_Buscar=new JButton("Buscar");
-        Btn_Buscar.setBounds(700, 80, 180,50);
+        Btn_Buscar.setBounds(700, 230, 180,50);
         Btn_Buscar.setBackground(new java.awt.Color(102, 153, 255));
         Btn_Buscar.setFont(new java.awt.Font("Roboto Light", 3, 18));
         Btn_Buscar.addActionListener(new ActionListener() {
@@ -273,7 +273,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         add(Btn_Cancelar);
         
         Btn_imprimir=new JButton("IMPRIMIR");
-        Btn_imprimir.setBounds(600, 300, 180,45);
+        Btn_imprimir.setBounds(600, 370, 180,45);
         Btn_imprimir.setBackground(new java.awt.Color(153, 204, 255));
         Btn_imprimir.setFont(new java.awt.Font("Roboto Light", 3, 18));
         Btn_imprimir.addActionListener(new ActionListener() {
@@ -287,7 +287,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         add(Btn_imprimir);
         
         Btn_Eliminar=new JButton("Eliminar");
-        Btn_Eliminar.setBounds(500, 230, 180,45);
+        Btn_Eliminar.setBounds(500, 300, 180,45);
         Btn_Eliminar.setBackground(new java.awt.Color(102, 153, 255));
         Btn_Eliminar.setFont(new java.awt.Font("Roboto Light", 3, 18));
         Btn_Eliminar.addActionListener(new ActionListener() {
@@ -299,7 +299,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         add(Btn_Eliminar);
         
         Btn_Salir=new JButton("Salir");
-        Btn_Salir.setBounds(700, 230, 180,45);
+        Btn_Salir.setBounds(700, 300, 180,45);
         Btn_Salir.setBackground(new java.awt.Color(102, 153, 255));
         Btn_Salir.setFont(new java.awt.Font("Roboto Light", 3, 18));
         Btn_Salir.addActionListener(new ActionListener() {
