@@ -220,7 +220,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         Btn_Agregar=new JButton("Agregar");
         Btn_Agregar.setBounds(500, 155, 180,50);
         Btn_Agregar.setBackground(new java.awt.Color(102, 153, 255));
-        Btn_Agregar.setIcon(new ImageIcon("C:\\Users\\bgrad\\OneDrive\\Documentos\\NETBEANS\\REGISTRO_VUELOS\\REGISTRO_VUELOS\\src\\IMAGENES\\agregar-archivo.png"));
+        Btn_Agregar.setIcon(new ImageIcon("src\\IMAGENES\\agregar-archivo.png"));
         Btn_Agregar.setFont(new java.awt.Font("Roboto Light", 3, 18));
         Btn_Agregar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) 
@@ -233,7 +233,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         Btn_Buscar=new JButton("Buscar");
         Btn_Buscar.setBounds(700, 230, 180,50);
         Btn_Buscar.setBackground(new java.awt.Color(102, 153, 255));
-        Btn_Buscar.setIcon(new ImageIcon("C:\\Users\\bgrad\\OneDrive\\Documentos\\NETBEANS\\REGISTRO_VUELOS\\REGISTRO_VUELOS\\src\\IMAGENES\\seo.png"));
+        Btn_Buscar.setIcon(new ImageIcon("src\\IMAGENES\\seo.png"));
         Btn_Buscar.setFont(new java.awt.Font("Roboto Light", 3, 18));
         Btn_Buscar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) 
@@ -246,7 +246,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         Btn_Cancelar=new JButton("Cancelar");
         Btn_Cancelar.setBounds(700, 155, 180,50);
         Btn_Cancelar.setBackground(new java.awt.Color(102, 153, 255));
-        Btn_Cancelar.setIcon(new ImageIcon("C:\\Users\\bgrad\\OneDrive\\Documentos\\NETBEANS\\REGISTRO_VUELOS\\REGISTRO_VUELOS\\src\\IMAGENES\\agregar-archivo.png"));
+        Btn_Cancelar.setIcon(new ImageIcon("src\\IMAGENES\\cancelar.png"));
         Btn_Cancelar.setFont(new java.awt.Font("Roboto Light", 3, 18));;
         Btn_Cancelar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) 
@@ -259,7 +259,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         Btn_imprimir=new JButton("IMPRIMIR");
         Btn_imprimir.setBounds(600, 370, 180,45);
         Btn_imprimir.setBackground(new java.awt.Color(153, 204, 255));
-        Btn_imprimir.setIcon(new ImageIcon("C:\\Users\\bgrad\\OneDrive\\Documentos\\NETBEANS\\REGISTRO_VUELOS\\REGISTRO_VUELOS\\src\\IMAGENES\\impresion.png"));
+        Btn_imprimir.setIcon(new ImageIcon("src\\IMAGENES\\impresion.png"));
         Btn_imprimir.setFont(new java.awt.Font("Roboto Light", 3, 18));
         Btn_imprimir.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) 
@@ -274,7 +274,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         Btn_Eliminar=new JButton("Eliminar");
         Btn_Eliminar.setBounds(500, 300, 180,45);
         Btn_Eliminar.setBackground(new java.awt.Color(102, 153, 255));
-        Btn_Eliminar.setIcon(new ImageIcon("C:\\Users\\bgrad\\OneDrive\\Documentos\\NETBEANS\\REGISTRO_VUELOS\\REGISTRO_VUELOS\\src\\IMAGENES\\borrar.png"));
+        Btn_Eliminar.setIcon(new ImageIcon("src\\IMAGENES\\borrar.png"));
         Btn_Eliminar.setFont(new java.awt.Font("Roboto Light", 3, 18));
         Btn_Eliminar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) 
@@ -287,7 +287,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         Btn_Salir=new JButton("Salir");
         Btn_Salir.setBounds(700, 300, 180,45);
         Btn_Salir.setBackground(new java.awt.Color(102, 153, 255));
-        Btn_Salir.setIcon(new ImageIcon("C:\\Users\\bgrad\\OneDrive\\Documentos\\NETBEANS\\REGISTRO_VUELOS\\REGISTRO_VUELOS\\src\\IMAGENES\\salida.png"));
+        Btn_Salir.setIcon(new ImageIcon("src\\IMAGENES\\salida.png"));
         Btn_Salir.setFont(new java.awt.Font("Roboto Light", 3, 18));
         Btn_Salir.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) 

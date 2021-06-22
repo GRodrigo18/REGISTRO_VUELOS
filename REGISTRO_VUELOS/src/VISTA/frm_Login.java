@@ -1,14 +1,17 @@
  
 package VISTA;
+import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
 import javax.swing.*;
 public class frm_Login extends JFrame implements ActionListener{
     
     JPanel jpanel1,Jpanel2;
-    JLabel lbln1,lbln2,lbln3,lbln4;
+    JLabel lbln1,lbln2,lbln3,lbln4,lbln5;
     JTextField txTUser;
-    JButton btnIngresar,btnSalir;
+    JButton btnIngresar,btncancelar,btnsalir,btnminimizar;
     JPasswordField txtContra;
     
     public frm_Login()
@@ -24,29 +27,54 @@ public class frm_Login extends JFrame implements ActionListener{
         setUndecorated(true);
         this.getContentPane().setBackground(new java.awt.Color(160, 174, 175));
         
+        
+        //todos los label
         lbln1=new JLabel("Ingrese Usuario:");
-        lbln1.setBounds(50, 250,250,30);
-        lbln1.setFont(new java.awt.Font("Sitka Subheading", 3, 17));
+        lbln1.setBounds(45, 260,250,30);
+        lbln1.setForeground(new java.awt.Color(240, 240, 240));
+        lbln1.setFont(new java.awt.Font("Sitka Subheading", 3, 18));
         add(lbln1);
         
         lbln2=new JLabel("Contraseña:");
-        lbln2.setBounds(50, 300,200,30);
-        lbln2.setFont(new java.awt.Font("Sitka Subheading", 3, 17));
+        lbln2.setBounds(80, 310,200,30);
+        lbln2.setForeground(new java.awt.Color(240, 240, 240));
+        lbln2.setFont(new java.awt.Font("Sitka Subheading", 3, 18));
         add(lbln2);
         
         lbln3=new JLabel();
         lbln3.setIcon(new ImageIcon("src\\IMAGENES\\avion.png"));
-        lbln3.setBounds(125, -20, 300, 300);
+        lbln3.setBounds(125, 21, 300, 300);
         add(lbln3);
         
         lbln4=new JLabel("Login Usuarios");
-        lbln4.setFont(new java.awt.Font("Sitka Subheading", 0, 24)); // NOI18N
+        lbln4.setFont(new java.awt.Font("Sitka Subheading", 1, 30)); // NOI18N
         lbln4.setForeground(new java.awt.Color(255, 255, 255));
-        lbln4.setBounds(5,0,400,60);
+        lbln4.setBounds(7,2,400,60);
         add(lbln4);
         
+        lbln5=new JLabel("Crear una nueva cuenta");
+        lbln5.setFont(new java.awt.Font("Sitka Subheading", 1, 16)); // NOI18N
+        lbln5.setForeground(new java.awt.Color(255, 255, 255));
+        lbln5.setBounds(125,410,400,60);
+        lbln5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lbln5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbln5MouseClicked(evt);
+            }
+            private void lbln5MouseClicked(MouseEvent evt) {
+                frm_Registro rgl=new frm_Registro();
+                rgl.setVisible(true);
+                rgl.pack();
+                rgl.setLocationRelativeTo(null);
+                rgl.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            }
+        });
+        add(lbln5);
+        
+        
+         //Todas las cajas de texto
         txTUser=new JTextField();
-        txTUser.setBounds(190, 250, 150, 30);
+        txTUser.setBounds(190, 260, 150, 30);
         txTUser.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {//evento para que solo letras
                  char validar=evt.getKeyChar();
@@ -59,26 +87,62 @@ public class frm_Login extends JFrame implements ActionListener{
                  }
             }
         });
-        txTUser.setFont(new java.awt.Font("Sitka Subheading", 3, 16));
+        txTUser.setFont(new java.awt.Font("Sitka Subheading", 3, 15));
+        txTUser.setBackground(new java.awt.Color(108, 122, 137));
         add(txTUser);
-        
+       
         txtContra=new JPasswordField();
-        txtContra.setBounds(190, 300, 150, 30);
-        txtContra.setFont(new java.awt.Font("Sitka Subheading", 3, 16));
+        txtContra.setBounds(190, 310, 150, 30);
+        txtContra.setFont(new java.awt.Font("Sitka Subheading", 3, 15));
+        txtContra.setBackground(new java.awt.Color(108, 122, 137));
         add(txtContra);
         
+        
+        //Todos los botones
         btnIngresar=new JButton("Ingresar");
-        btnIngresar.setFont(new java.awt.Font("Sitka Subheading", 3, 18));
-        btnIngresar.setBounds(120, 370, 150, 30);
-        btnIngresar.setBorder(null);
+        btnIngresar.setFont(new java.awt.Font("Sitka Subheading", 1, 18));
+        btnIngresar.setBounds(210, 370, 130, 35);
+        btnIngresar.setForeground(new java.awt.Color(255, 255, 255));
+        btnIngresar.setBackground(new java.awt.Color(34, 167, 240));
         btnIngresar.addActionListener(this);
         add(btnIngresar);
         
-        btnSalir=new JButton("Salir");
-        btnSalir.setFont(new java.awt.Font("Sitka Subheading", 3, 18));
-        btnSalir.setBounds(270, 420, 100, 30);
-        btnSalir.addActionListener(this);
-        add(btnSalir);
+        btncancelar=new JButton("Cancelar");
+        btncancelar.setFont(new java.awt.Font("Sitka Subheading", 3, 18));
+        btncancelar.setBounds(60, 370, 130, 35);
+        btncancelar.setForeground(new java.awt.Color(255, 255, 255));
+        btncancelar.setBackground(new java.awt.Color(192, 57, 43));
+        btncancelar.addActionListener(this);
+        add(btncancelar);
+        
+        btnminimizar=new JButton();
+        btnminimizar.setOpaque(false);
+        btnminimizar.setContentAreaFilled(false);
+        btnminimizar.setBorderPainted(false);
+        btnminimizar.setIcon(new ImageIcon("src\\IMAGENES\\minimizar.png"));
+        btnminimizar.setBounds(260, 0, 62, 61);
+        btnminimizar.addActionListener(this);
+        btnminimizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnminimizarMouseClicked(evt);
+            }
+            private void btnminimizarMouseClicked(MouseEvent evt) {
+                this.setState(JFrame.ICONIFIED);
+            }
+            private void setState(int ICONIFIED) {
+                setExtendedState(WIDTH);
+            }
+        });
+        add(btnminimizar);
+        
+        btnsalir=new JButton();
+        btnsalir.setOpaque(false);
+        btnsalir.setContentAreaFilled(false);
+        btnsalir.setBorderPainted(false);
+        btnsalir.setIcon(new ImageIcon("src\\IMAGENES\\cerrar.png"));
+        btnsalir.setBounds(330, 0, 62, 61);
+        btnsalir.addActionListener(this);
+        add(btnsalir);
         
         jpanel1=new JPanel();
         jpanel1.setBackground(new java.awt.Color(248, 148, 6));
@@ -121,7 +185,11 @@ public class frm_Login extends JFrame implements ActionListener{
          {
              Ingresar();
          }
-         if (e.getSource()== btnSalir)
+         if (e.getSource()== btnsalir)
+         {
+             Salir();
+         }
+         if (e.getSource()== btncancelar)
          {
              Salir();
          }
