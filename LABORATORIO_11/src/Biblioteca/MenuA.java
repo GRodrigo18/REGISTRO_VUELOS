@@ -8,7 +8,7 @@ public class MenuA extends JFrame {
 
     JMenuBar barra;
     JMenu archivo, mantenimiento;   
-    JMenuItem salir, contactos, registro;
+    JMenuItem salir, contactos;
     
     public MenuA(){
         initComponents();
@@ -28,7 +28,6 @@ public class MenuA extends JFrame {
         
         salir=new JMenuItem();  
         contactos=new JMenuItem();
-        registro=new JMenuItem();
           
         archivo.setText(" Archivo ");
         
@@ -51,18 +50,8 @@ public class MenuA extends JFrame {
                 }
         });
         add(contactos); 
-            
-        registro.setText("Registro");
-        registro.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e)
-                {
-                  mantem();
-                }
-        });
-        add(registro); 
         
         archivo.add(salir);
-        mantenimiento.add(registro);
         mantenimiento.add(contactos);
         
         barra.add(archivo);
@@ -82,11 +71,4 @@ public class MenuA extends JFrame {
                 principalA.setLocationRelativeTo(null);
                 principalA.setVisible(true);
     }
-      
-    public void mantem(){
-       FrmLista principalL=new FrmLista();
-              principalL.setLocationRelativeTo(null);
-              principalL.setVisible(true);
-    }
-  
 }

@@ -11,8 +11,13 @@ public class Arbol {
         Raiz = null;
     }
     
-    public void setRaiz (Nodo Raiz) {this.Raiz = Raiz;}
-    public Nodo getRaiz() {return Raiz;}
+    public void setRaiz (Nodo Raiz) {
+        this.Raiz = Raiz;
+    }
+    
+    public Nodo getRaiz() {
+        return Raiz;
+    }
    
     public Nodo Agregar(Nodo Nodo, Cliente Elemento)
     {

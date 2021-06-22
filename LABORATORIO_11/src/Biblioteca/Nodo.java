@@ -1,4 +1,3 @@
-
 package Biblioteca;
 
 public class Nodo {
@@ -12,13 +11,22 @@ public class Nodo {
         izq = der = null;
     }
     
-    public Nodo getder() {return der;}
-    public void setder(Nodo der) {this.der = der;}
+    public Nodo getder() {
+        return der;}
     
-    public Cliente getElemento() {return Elemento;}
-    public void setElemento(Cliente Elemento) {this.Elemento = Elemento;}
+    public void setder(Nodo der) {
+        this.der = der;}
     
-    public Nodo getizq() {return izq;}
-    public void setizq(Nodo izq) {this.izq = izq;}
+    public Cliente getElemento() {
+        return Elemento;}
+    
+    public void setElemento(Cliente Elemento) {
+        this.Elemento = Elemento;}
+    
+    public Nodo getizq() {
+        return izq;}
+    
+    public void setizq(Nodo izq) {
+        this.izq = izq;}
     
 }

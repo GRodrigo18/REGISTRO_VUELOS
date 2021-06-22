@@ -6,13 +6,12 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
 public class FrmLista extends JFrame {
-
-    DefaultTableModel Modtabla;
     
     public FrmLista()
     {
         initComponents();
         setLocationRelativeTo(null);
+        modelo=(DefaultTableModel)tabla.getModel();
     }
 
     public void initComponents(){
@@ -37,6 +36,14 @@ public class FrmLista extends JFrame {
         tabla.setModel(modelo);
         
         barra.setViewportView(tabla);
+        tabla.setModel(modelo); 
+        
+        barra=new JScrollPane();
+        barra.setBounds(30,70,600,200);
+        modelo=new DefaultTableModel(null,titulo);
+        add(barra); 
+        
+        barra.setViewportView(tabla);
         barra.setBounds(10,20,400,200);
         add(barra);
     }
@@ -51,6 +58,6 @@ public class FrmLista extends JFrame {
     JButton btnCerrar;
     JTable tabla;
     JScrollPane barra;
-    DefaultTableModel modelo;
+    public static  DefaultTableModel modelo;
     String titulo[]= {"CODIGO","APELLIDOS","NOMBRES"};
 }
