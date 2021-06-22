@@ -15,7 +15,7 @@ public class Menu extends JFrame{
     }
     public void initComponents(){  
         
-        setSize(640,360);
+        setSize(1000,900);
         setTitle("REGISTRO DE VUELOS");
         setLayout(null); 
         
@@ -31,8 +31,8 @@ public class Menu extends JFrame{
         archivo.setText(" ARCHIVO ");
         
         fondo=new JLabel();
-        fondo.setIcon(new ImageIcon("C:\\Users\\bgrad\\OneDrive\\Documentos\\NETBEANS\\REGISTRO_VUELOS\\REGISTRO_VUELOS\\src\\IMAGENES\\fondo_Menu.jpg"));
-        fondo.setBounds(00, -20, 640, 360);
+        fondo.setIcon(new ImageIcon("C:\\Users\\bgrad\\OneDrive\\Documentos\\NETBEANS\\REGISTRO_VUELOS\\REGISTRO_VUELOS\\src\\IMAGENES\\fondo.jpg"));
+        fondo.setBounds(00, -20, 950, 900);
         add(fondo);
                 
         salir.setText("Salir");

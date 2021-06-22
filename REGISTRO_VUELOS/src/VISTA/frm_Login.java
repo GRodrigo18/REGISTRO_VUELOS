@@ -34,11 +34,23 @@ public class frm_Login extends JFrame implements ActionListener{
         
         lbln3=new JLabel();
         lbln3.setIcon(new ImageIcon("C:\\Users\\bgrad\\OneDrive\\Documentos\\NETBEANS\\REGISTRO_VUELOS\\REGISTRO_VUELOS\\src\\IMAGENES\\avion.png"));
-        lbln3.setBounds(0, -20, 300, 300);
+        lbln3.setBounds(125, -20, 300, 300);
         add(lbln3);
         
         txTUser=new JTextField();
         txTUser.setBounds(190, 270, 150, 30);
+         txTUser.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {//evento para que solo letras
+                 char validar=evt.getKeyChar();
+                 if(Character.isDigit(validar))
+                 {
+                    getToolkit().beep();
+                    evt.consume();
+                    
+                    JOptionPane.showMessageDialog(rootPane,"Ingresar solo Letras");
+                 }
+            }
+        });
         txTUser.setFont(new java.awt.Font("Sitka Subheading", 3, 16));
         add(txTUser);
         
