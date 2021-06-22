@@ -35,7 +35,7 @@ public class frm_Login extends JFrame implements ActionListener{
         add(lbln2);
         
         lbln3=new JLabel();
-        lbln3.setIcon(new ImageIcon("C:\\Users\\bgrad\\OneDrive\\Documentos\\NETBEANS\\REGISTRO_VUELOS\\REGISTRO_VUELOS\\src\\IMAGENES\\avion.png"));
+        lbln3.setIcon(new ImageIcon("src\\IMAGENES\\avion.png"));
         lbln3.setBounds(125, -20, 300, 300);
         add(lbln3);
         
