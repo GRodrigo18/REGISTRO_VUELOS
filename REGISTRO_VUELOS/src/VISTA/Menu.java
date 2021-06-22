@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 public class Menu extends JFrame{
+    JLabel fondo;
     JMenuBar barra;
     JMenu archivo, mantenimiento;   
     JMenuItem salir, Boleta, registro;
@@ -14,7 +15,7 @@ public class Menu extends JFrame{
     }
     public void initComponents(){  
         
-        setSize(450,320);
+        setSize(640,360);
         setTitle("REGISTRO DE VUELOS");
         setLayout(null); 
         
@@ -29,6 +30,11 @@ public class Menu extends JFrame{
           
         archivo.setText(" ARCHIVO ");
         
+        fondo=new JLabel();
+        fondo.setIcon(new ImageIcon("C:\\Users\\bgrad\\OneDrive\\Documentos\\NETBEANS\\REGISTRO_VUELOS\\REGISTRO_VUELOS\\src\\IMAGENES\\fondo_Menu.jpg"));
+        fondo.setBounds(00, -20, 640, 360);
+        add(fondo);
+                
         salir.setText("Salir");
         salir.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e)

@@ -39,6 +39,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         setSize(950, 850);
         setTitle("-REGISTRO VUELOS-");
         setLayout(null);
+        this.getContentPane().setBackground(new java.awt.Color(204, 255, 255));
         
         
         lbln1 =new JLabel("REGISTRO DE VUELOS");
