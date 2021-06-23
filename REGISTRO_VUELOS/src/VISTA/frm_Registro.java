@@ -16,7 +16,7 @@ public class frm_Registro extends JFrame{
     {
         setSize(350, 450);
         setTitle("Registro");
-        getContentPane().setLayout(null);
-        setUndecorated(true);
+        //getContentPane().setLayout(null);
+        //setUndecorated(true);
     }
 }
