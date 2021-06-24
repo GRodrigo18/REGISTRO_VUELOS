@@ -37,94 +37,95 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
     }
      public void iniComponets()
     {
-        setSize(950, 850);
+        setSize(780, 640);
         setTitle("-REGISTRO VUELOS-");
         setLayout(null);
         this.getContentPane().setBackground(new java.awt.Color(204, 255, 255));
         
         
         lbln1 =new JLabel("REGISTRO DE VUELOS");
-        lbln1.setBounds(300, 10, 400, 50);
+        lbln1.setBounds(240, 10, 400, 50);
         lbln1.setForeground(new java.awt.Color(51, 102, 255));
-        lbln1.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 30));
+        lbln1.setFont(new java.awt.Font("Rockwell Extra Bold", 1, 25));
         add(lbln1);
         
         lbln2 =new JLabel("TIPO DE DOCUMENTO:");
-        lbln2.setBounds(50, 70, 200, 30);
-        lbln2.setFont(new java.awt.Font("Sitka Subheading", 3, 17));
+        lbln2.setBounds(30, 70, 200, 30);
+        lbln2.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(lbln2);
         
         lbln3 =new JLabel("NÚMERO DE DOCUMENTO:");
-        lbln3.setBounds(50, 110, 250, 30);
-        lbln3.setFont(new java.awt.Font("Sitka Subheading", 3, 17));
+        lbln3.setBounds(30, 100, 250, 30);
+        lbln3.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(lbln3);
         
         lbln4 =new JLabel("PASAPORTE:");
-        lbln4.setBounds(50, 150, 200, 30);
-        lbln4.setFont(new java.awt.Font("Sitka Subheading", 3, 17));
+        lbln4.setBounds(30, 130, 200, 30);
+        lbln4.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(lbln4);
         
         lbl5 =new JLabel("NOMBRES:");
-        lbl5.setBounds(50, 190, 200, 30);
-        lbl5.setFont(new java.awt.Font("Sitka Subheading", 3, 17));
+        lbl5.setBounds(30, 160, 200, 30);
+        lbl5.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(lbl5);
         
         lbl6 =new JLabel("APELLIDOS:");
-        lbl6.setBounds(50, 230, 200, 30);
-        lbl6.setFont(new java.awt.Font("Sitka Subheading", 3, 17));
+        lbl6.setBounds(30, 190, 200, 30);
+        lbl6.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(lbl6);
         
         lbl7 =new JLabel("SEXO:");
-        lbl7.setBounds(50, 270, 200, 30);
-        lbl7.setFont(new java.awt.Font("Sitka Subheading", 3, 17));
+        lbl7.setBounds(30, 220, 200, 30);
+        lbl7.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(lbl7);
         
         lbl8 =new JLabel("ORIGEN:");
-        lbl8.setBounds(50, 310, 200, 30);
-        lbl8.setFont(new java.awt.Font("Sitka Subheading", 3, 17));
+        lbl8.setBounds(30, 250, 200, 30);
+        lbl8.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(lbl8);
         
         lbl9 =new JLabel("DESTINO:");
-        lbl9.setBounds(50, 350, 200, 30);
-        lbl9.setFont(new java.awt.Font("Sitka Subheading", 3, 17));
+        lbl9.setBounds(30, 280, 200, 30);
+        lbl9.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(lbl9);
         
         lbl10 =new JLabel("FECHA DE SALIDA:");
-        lbl10.setBounds(50, 390, 500, 30);
-        lbl10.setFont(new java.awt.Font("Sitka Subheading", 3, 17));
+        lbl10.setBounds(30, 310, 500, 30);
+        lbl10.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(lbl10);
          
         lbl11 =new JLabel("FECHA DE RETORNO:");
-        lbl11.setBounds(50, 430, 500, 30);
-        lbl11.setFont(new java.awt.Font("Sitka Subheading", 3, 17));
+        lbl11.setBounds(30, 340, 500, 30);
+        lbl11.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(lbl11);
         
         lblfcha =new JLabel("FECHA");
-        lblfcha.setBounds(550, 65, 180,45);
+        lblfcha.setBounds(480, 65, 180,45);
         lblfcha.setForeground(new java.awt.Color(0, 102, 102));
         lblfcha.setFont(new java.awt.Font("Roboto Light", 3, 17));
         add(lblfcha);
         
         lblhora =new JLabel("HORA");
-        lblhora.setBounds(750, 65, 180,45);
+        lblhora.setBounds(600, 65, 180,45);
         lblhora.setForeground(new java.awt.Color(0, 102, 102));
         lblhora.setFont(new java.awt.Font("Roboto Light", 3, 17));
         add(lblhora);
         
         lblfechactual =new JLabel("DO/MM/YYYY");
-        lblfechactual.setBounds(550, 95, 180,45);
+        lblfechactual.setBounds(480, 95, 180,45);
         lblfechactual.setForeground(new java.awt.Color(0, 102, 102));
         lblfechactual.setFont(new java.awt.Font("Roboto Light", 3, 17));
         add(lblfechactual);
         
         lblhoraactual =new JLabel("00:00:00");
-        lblhoraactual.setBounds(750, 95, 180,45);
+        lblhoraactual.setBounds(600, 95, 180,45);
         lblhoraactual.setForeground(new java.awt.Color(0, 102, 102));
         lblhoraactual.setFont(new java.awt.Font("Roboto Light", 3, 17));
         add(lblhoraactual);
         
+        
         txtnumdocu=new JTextField();
-        txtnumdocu.setBounds(290, 110, 150, 30);
+        txtnumdocu.setBounds(240, 100, 180, 25);
         txtnumdocu.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {//evento para que solo valide numeros
                  
@@ -132,11 +133,11 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
                 ValidarLetrasNumeros(Character.isLetter(evt.getKeyChar()), evt);
             }
         });
-        txtnumdocu.setFont(new java.awt.Font("Roboto Light", 3, 16));
+        txtnumdocu.setFont(new java.awt.Font("Roboto Light", 3, 14));
         add(txtnumdocu); 
         
         txtpasaporte=new JTextField();
-        txtpasaporte.setBounds(290, 150, 150, 30);
+        txtpasaporte.setBounds(240, 130, 180, 25);
         txtpasaporte.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {//evento para que solo valide numeros
                 ValidarLongitudCadena(txtpasaporte.getText(),12, evt);
@@ -144,11 +145,11 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
                  
             }
         });
-        txtpasaporte.setFont(new java.awt.Font("Roboto Light", 3, 16));
+        txtpasaporte.setFont(new java.awt.Font("Roboto Light", 3, 14));
         add(txtpasaporte); 
         
         txtnombres=new JTextField();
-        txtnombres.setBounds(290, 190, 150, 30);
+        txtnombres.setBounds(240, 160, 180, 25);
         txtnombres.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {//evento para que solo letras
                  char validar=evt.getKeyChar();
@@ -162,11 +163,11 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
                 
             }
         });
-        txtnombres.setFont(new java.awt.Font("Sitka Subheading", 3, 16));
+        txtnombres.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(txtnombres); 
         
         txtapellidos=new JTextField();
-        txtapellidos.setBounds(290, 230, 150, 30);
+        txtapellidos.setBounds(240, 190, 180, 25);
         txtapellidos.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {//evento para que solo letras
                  char validar=evt.getKeyChar();
@@ -179,35 +180,35 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
                  }
             }
         });
-        txtapellidos.setFont(new java.awt.Font("Sitka Subheading", 3, 16));
+        txtapellidos.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(txtapellidos); 
         
         txtfechsalida=new JTextField();
-        txtfechsalida.setBounds(290, 390, 150, 30);
+        txtfechsalida.setBounds(240, 310, 180, 25);
         txtfechsalida.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {//evento para que solo valide numeros
                 ValidarLongitudCadena(txtfechsalida.getText(),8, evt);
                 ValidarLetrasNumeros(Character.isLetter(evt.getKeyChar()), evt);            }
         });
-        txtfechsalida.setFont(new java.awt.Font("Sitka Subheading", 3, 16));
+        txtfechsalida.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(txtfechsalida); 
         
         txtfecharetorno=new JTextField();
-        txtfecharetorno.setBounds(290, 430, 150, 30);
+        txtfecharetorno.setBounds(240, 340, 180, 25);
         txtfecharetorno.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {//evento para que solo valide numeros
                 ValidarLongitudCadena(txtfecharetorno.getText(),8, evt);
                 ValidarLetrasNumeros(Character.isLetter(evt.getKeyChar()), evt);
             }
         });
-        txtfecharetorno.setFont(new java.awt.Font("Sitka Subheading", 3, 16));
+        txtfecharetorno.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(txtfecharetorno);
         
         
         Btn_nuevo=new JButton("Nuevo");
-        Btn_nuevo.setBounds(500, 230, 180,50);
+        Btn_nuevo.setBounds(440, 200, 140,35);
         Btn_nuevo.setBackground(new java.awt.Color(102, 153, 255));
-        Btn_nuevo.setIcon(new ImageIcon("C:\\Users\\bgrad\\OneDrive\\Documentos\\NETBEANS\\REGISTRO_VUELOS\\REGISTRO_VUELOS\\src\\IMAGENES\\anadir-grupo.png"));
+        Btn_nuevo.setIcon(new ImageIcon("src\\IMAGENES\\anadir-grupo.png"));
         Btn_nuevo.setFont(new java.awt.Font("Roboto Light", 3, 18));
         Btn_nuevo.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) 
@@ -218,7 +219,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         add(Btn_nuevo);
           
         Btn_Agregar=new JButton("Agregar");
-        Btn_Agregar.setBounds(500, 155, 180,50);
+        Btn_Agregar.setBounds(440, 150, 140,35);
         Btn_Agregar.setBackground(new java.awt.Color(102, 153, 255));
         Btn_Agregar.setIcon(new ImageIcon("src\\IMAGENES\\agregar-archivo.png"));
         Btn_Agregar.setFont(new java.awt.Font("Roboto Light", 3, 18));
@@ -231,7 +232,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         add(Btn_Agregar);
         
         Btn_Buscar=new JButton("Buscar");
-        Btn_Buscar.setBounds(700, 230, 180,50);
+        Btn_Buscar.setBounds(590, 200, 140,35);
         Btn_Buscar.setBackground(new java.awt.Color(102, 153, 255));
         Btn_Buscar.setIcon(new ImageIcon("src\\IMAGENES\\seo.png"));
         Btn_Buscar.setFont(new java.awt.Font("Roboto Light", 3, 18));
@@ -244,7 +245,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         add(Btn_Buscar);
         
         Btn_Cancelar=new JButton("Cancelar");
-        Btn_Cancelar.setBounds(700, 155, 180,50);
+        Btn_Cancelar.setBounds(590, 150, 140,35);
         Btn_Cancelar.setBackground(new java.awt.Color(102, 153, 255));
         Btn_Cancelar.setIcon(new ImageIcon("src\\IMAGENES\\cancelar.png"));
         Btn_Cancelar.setFont(new java.awt.Font("Roboto Light", 3, 18));;
@@ -257,7 +258,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         add(Btn_Cancelar);
         
         Btn_imprimir=new JButton("IMPRIMIR");
-        Btn_imprimir.setBounds(600, 370, 180,45);
+        Btn_imprimir.setBounds(515, 300, 150,40);
         Btn_imprimir.setBackground(new java.awt.Color(153, 204, 255));
         Btn_imprimir.setIcon(new ImageIcon("src\\IMAGENES\\impresion.png"));
         Btn_imprimir.setFont(new java.awt.Font("Roboto Light", 3, 18));
@@ -272,7 +273,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         add(Btn_imprimir);
         
         Btn_Eliminar=new JButton("Eliminar");
-        Btn_Eliminar.setBounds(500, 300, 180,45);
+        Btn_Eliminar.setBounds(440, 250, 140,35);
         Btn_Eliminar.setBackground(new java.awt.Color(102, 153, 255));
         Btn_Eliminar.setIcon(new ImageIcon("src\\IMAGENES\\borrar.png"));
         Btn_Eliminar.setFont(new java.awt.Font("Roboto Light", 3, 18));
@@ -285,7 +286,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         add(Btn_Eliminar);
         
         Btn_Salir=new JButton("Salir");
-        Btn_Salir.setBounds(700, 300, 180,45);
+        Btn_Salir.setBounds(590, 250, 140,35);
         Btn_Salir.setBackground(new java.awt.Color(102, 153, 255));
         Btn_Salir.setIcon(new ImageIcon("src\\IMAGENES\\salida.png"));
         Btn_Salir.setFont(new java.awt.Font("Roboto Light", 3, 18));
@@ -300,29 +301,29 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
     
         String a[]={"Seleccione","DNI","CARNET DE EXTRANJERIA"};
         cbotipodocu=new JComboBox<>(a);
-        cbotipodocu.setBounds(290,70, 150, 30);
-        cbotipodocu.setFont(new java.awt.Font("Sitka Subheading", 3, 16));
+        cbotipodocu.setBounds(240,70, 180, 25);
+        cbotipodocu.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(cbotipodocu);
         
         String b[]={"Seleccione","Masculino","Femenino"};
         cbosexo=new JComboBox<>(b);
-        cbosexo.setBounds(290, 270, 150, 30);
-        cbosexo.setFont(new java.awt.Font("Sitka Subheading", 3, 16));
+        cbosexo.setBounds(240, 220, 180, 25);
+        cbosexo.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(cbosexo); 
         
         
         String c[]={"Seleccione","Lima","Amazonas","Ancash","Apurimac","Arequipa",
                     "Ayacucho","Cajamarca","Callao","Huancavelica"};
         cboorigen=new JComboBox<>(c);
-        cboorigen.setBounds(290, 310, 150, 30);
-        cboorigen.setFont(new java.awt.Font("Sitka Subheading", 3, 16));
+        cboorigen.setBounds(240, 250, 180, 25);
+        cboorigen.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(cboorigen);
         
         String d[]={"Seleccione","Tokio","New York","Los Angeles","Paris","Seul",
                     "Londres","Moscu","Boston","Barcelona","Bogota"};
         cbodestino=new JComboBox<>(d);
-        cbodestino.setBounds(290, 350, 150, 30);
-        cbodestino.setFont(new java.awt.Font("Sitka Subheading", 3, 16));
+        cbodestino.setBounds(240, 280, 180, 25);
+        cbodestino.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(cbodestino);
         
         Tbl_Datos=new JTable(ModTabla);
@@ -331,7 +332,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         Tbl_Datos.setModel(ModTabla);
         
         barra.setViewportView(Tbl_Datos);
-        barra.setBounds(50,490,850,300);
+        barra.setBounds(30,380,722,190);
         add(barra);         
     }
     public static String fecha()
@@ -508,6 +509,58 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
                            txtfecharetorno.getText()
                             };
         Cliente Elemento =new Cliente(Registro);
+        if(cbotipodocu.getSelectedItem().toString().isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "Seleccione el Tipo de documento");
+            cbotipodocu.requestFocus();
+        }
+        else if(txtnumdocu.getText().isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "Ingrese el número del documento");
+            txtnumdocu.requestFocus();
+        }
+        else if(txtpasaporte.getText().isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "Ingrese el número del pasaporte");
+            txtpasaporte.requestFocus();
+        }
+        else if(txtnombres.getText().isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "Ingrese los nombres");
+            txtnombres.requestFocus();
+        }
+        else if(txtapellidos.getText().isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "Ingrese los apellidos");
+            txtapellidos.requestFocus();
+        }
+        else if(cbosexo.getSelectedItem().toString().isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "Seleccione el genero");
+            cbosexo.requestFocus();
+        }
+        else if(cboorigen.getSelectedItem().toString().isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "Seleccione en donde se encuentra");
+            cboorigen.requestFocus();
+        }
+        else if(cbodestino.getSelectedItem().toString().isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "Selecciona su destino");
+            cbodestino.requestFocus();
+        }
+        else if(txtfechsalida.getText().isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "Ingrese la fecha de salida");
+            txtfechsalida.requestFocus();
+        }
+        else if(txtfecharetorno.getText().isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "Ingrese la fecha de retorno");
+            txtfecharetorno.requestFocus();
+        }
+        else {  
+                    
         objArbol.setRaiz(objArbol.Agregar(objArbol.getRaiz(), Elemento));
         //10.Llame al metodo Limpiar_tabla
         Limpiar_Tabla();
@@ -518,6 +571,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         Limpiar_Controles();
         //13.llamar el metodo Estado_Controles en (Estado 1)
         Deshablitar();
+        }
     }
     //BOTON CANCELAR
     public void Cancelar()
@@ -561,7 +615,6 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         int fila = Tbl_Datos.getSelectedRow();
         if (fila != -1)
         {
-              
             String Cadena= ModTabla.getValueAt(fila, 0)+ " "+
                            ModTabla.getValueAt(fila, 1)+ " "+
                            ModTabla.getValueAt(fila, 2)+ " "+
@@ -596,6 +649,6 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
     JTable Tbl_Datos;
     JScrollPane barra;
     DefaultTableModel ModTabla;
-        String []titulo={"Tipo doc","N°documento","Pasaporte","Nombres",
+        String []titulo={"Tipo doc.","N°doc.","Pasaporte","Nombres",
             "Apellidos","Sexo","Origen","Destino","Salida","Retorno"};
 }
