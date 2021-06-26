@@ -19,23 +19,23 @@ public class frm_Login extends JFrame implements ActionListener{
     }
     public void iniComponets()
     {
-        setSize(400, 500);
+        setSize(400, 510);
         setTitle("Login");
         getContentPane().setLayout(null);
         setUndecorated(true);
-        this.getContentPane().setBackground(new java.awt.Color(160, 174, 175));
+        this.getContentPane().setBackground(new java.awt.Color(210, 77, 87));
         
         
         //todos los label
         lbln1=new JLabel("Ingrese Usuario:");
         lbln1.setBounds(45, 260,250,30);
-        lbln1.setForeground(new java.awt.Color(240, 240, 240));
+        lbln1.setForeground(new java.awt.Color(255, 255, 255));
         lbln1.setFont(new java.awt.Font("Sitka Subheading", 3, 18));
         add(lbln1);
         
         lbln2=new JLabel("Contraseña:");
         lbln2.setBounds(80, 310,200,30);
-        lbln2.setForeground(new java.awt.Color(240, 240, 240));
+        lbln2.setForeground(new java.awt.Color(255, 255, 255));
         lbln2.setFont(new java.awt.Font("Sitka Subheading", 3, 18));
         add(lbln2);
         
@@ -46,8 +46,8 @@ public class frm_Login extends JFrame implements ActionListener{
         
         lbln4=new JLabel("Login Usuarios");
         lbln4.setFont(new java.awt.Font("Sitka Subheading", 1, 30)); // NOI18N
-        lbln4.setForeground(new java.awt.Color(255, 255, 255));
-        lbln4.setBounds(7,2,400,60);
+        lbln4.setForeground(new java.awt.Color(0, 0, 0));
+        lbln4.setBounds(10,4,400,60);
         add(lbln4);
         
         lbln5=new JLabel("Crear una nueva cuenta");
@@ -60,11 +60,8 @@ public class frm_Login extends JFrame implements ActionListener{
                 lbln5MouseClicked(evt);
             }
             private void lbln5MouseClicked(MouseEvent evt) {
-                frm_Registro rgl=new frm_Registro();
-                rgl.setVisible(true);
-                rgl.pack();
-                rgl.setLocationRelativeTo(null);
-                rgl.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frm_Registrousuario rgf=new frm_Registrousuario();
+                rgf.setVisible(true);
             }
         });
         add(lbln5);
@@ -117,8 +114,8 @@ public class frm_Login extends JFrame implements ActionListener{
         btnminimizar.setOpaque(false);
         btnminimizar.setContentAreaFilled(false);
         btnminimizar.setBorderPainted(false);
-        btnminimizar.setIcon(new ImageIcon("src\\IMAGENES\\minimizar.png"));
-        btnminimizar.setBounds(260, 0, 62, 61);
+        btnminimizar.setIcon(new ImageIcon("src\\IMAGENES\\minimi.png"));
+        btnminimizar.setBounds(270, 3, 62, 61);
         btnminimizar.addActionListener(this);
         btnminimizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -138,18 +135,18 @@ public class frm_Login extends JFrame implements ActionListener{
         btnsalir.setContentAreaFilled(false);
         btnsalir.setBorderPainted(false);
         btnsalir.setIcon(new ImageIcon("src\\IMAGENES\\cerrar.png"));
-        btnsalir.setBounds(330, 0, 62, 61);
+        btnsalir.setBounds(330, 3, 62, 61);
         btnsalir.addActionListener(this);
         add(btnsalir);
         
         jpanel1=new JPanel();
-        jpanel1.setBackground(new java.awt.Color(248, 148, 6));
-        jpanel1.setBounds(0, 0, 400, 60);
+        jpanel1.setBackground(new java.awt.Color(82, 179, 217));
+        jpanel1.setBounds(0, 0, 500, 70);
         add(jpanel1);
         
         Jpanel2=new JPanel();
-        Jpanel2.setBackground(new java.awt.Color(44, 62, 80));
-        Jpanel2.setBounds(0, 60, 400, 500);
+        Jpanel2.setBackground(new java.awt.Color(58, 83, 155));
+        Jpanel2.setBounds(0, 60, 500, 500);
         add(Jpanel2);
     }
     public static void main(String[] args) {
