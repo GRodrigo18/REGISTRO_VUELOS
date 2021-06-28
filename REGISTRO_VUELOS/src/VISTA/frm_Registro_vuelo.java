@@ -40,86 +40,96 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         setSize(780, 640);
         setTitle("-REGISTRO VUELOS-");
         setLayout(null);
-        this.getContentPane().setBackground(new java.awt.Color(204, 255, 255));
+        this.getContentPane().setBackground(new java.awt.Color(58, 83, 155));
         
         
         lbln1 =new JLabel("REGISTRO DE VUELOS");
         lbln1.setBounds(240, 10, 400, 50);
-        lbln1.setForeground(new java.awt.Color(51, 102, 255));
+        lbln1.setForeground(new java.awt.Color(204, 255, 255));
         lbln1.setFont(new java.awt.Font("Rockwell Extra Bold", 1, 25));
         add(lbln1);
         
         lbln2 =new JLabel("TIPO DE DOCUMENTO:");
         lbln2.setBounds(30, 70, 200, 30);
+        lbln2.setForeground(new java.awt.Color(204, 255, 255));
         lbln2.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(lbln2);
         
         lbln3 =new JLabel("NÚMERO DE DOCUMENTO:");
         lbln3.setBounds(30, 100, 250, 30);
+        lbln3.setForeground(new java.awt.Color(204, 255, 255));
         lbln3.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(lbln3);
         
         lbln4 =new JLabel("PASAPORTE:");
         lbln4.setBounds(30, 130, 200, 30);
+        lbln4.setForeground(new java.awt.Color(204, 255, 255));
         lbln4.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(lbln4);
         
         lbl5 =new JLabel("NOMBRES:");
         lbl5.setBounds(30, 160, 200, 30);
+        lbl5.setForeground(new java.awt.Color(204, 255, 255));
         lbl5.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(lbl5);
         
         lbl6 =new JLabel("APELLIDOS:");
         lbl6.setBounds(30, 190, 200, 30);
+        lbl6.setForeground(new java.awt.Color(204, 255, 255));
         lbl6.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(lbl6);
         
         lbl7 =new JLabel("SEXO:");
         lbl7.setBounds(30, 220, 200, 30);
+        lbl7.setForeground(new java.awt.Color(204, 255, 255));
         lbl7.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(lbl7);
         
         lbl8 =new JLabel("ORIGEN:");
         lbl8.setBounds(30, 250, 200, 30);
+        lbl8.setForeground(new java.awt.Color(204, 255, 255));
         lbl8.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(lbl8);
         
         lbl9 =new JLabel("DESTINO:");
         lbl9.setBounds(30, 280, 200, 30);
+        lbl9.setForeground(new java.awt.Color(204, 255, 255));
         lbl9.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(lbl9);
         
         lbl10 =new JLabel("FECHA DE SALIDA:");
         lbl10.setBounds(30, 310, 500, 30);
+        lbl10.setForeground(new java.awt.Color(204, 255, 255));
         lbl10.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(lbl10);
          
         lbl11 =new JLabel("FECHA DE RETORNO:");
         lbl11.setBounds(30, 340, 500, 30);
+        lbl11.setForeground(new java.awt.Color(204, 255, 255));
         lbl11.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(lbl11);
         
         lblfcha =new JLabel("FECHA");
         lblfcha.setBounds(480, 65, 180,45);
-        lblfcha.setForeground(new java.awt.Color(0, 102, 102));
+        lblfcha.setForeground(new java.awt.Color(204, 255, 255));
         lblfcha.setFont(new java.awt.Font("Roboto Light", 3, 17));
         add(lblfcha);
         
         lblhora =new JLabel("HORA");
         lblhora.setBounds(600, 65, 180,45);
-        lblhora.setForeground(new java.awt.Color(0, 102, 102));
+        lblhora.setForeground(new java.awt.Color(204, 255, 255));
         lblhora.setFont(new java.awt.Font("Roboto Light", 3, 17));
         add(lblhora);
         
         lblfechactual =new JLabel("DO/MM/YYYY");
         lblfechactual.setBounds(480, 95, 180,45);
-        lblfechactual.setForeground(new java.awt.Color(0, 102, 102));
+        lblfechactual.setForeground(new java.awt.Color(204, 255, 255));
         lblfechactual.setFont(new java.awt.Font("Roboto Light", 3, 17));
         add(lblfechactual);
         
         lblhoraactual =new JLabel("00:00:00");
         lblhoraactual.setBounds(600, 95, 180,45);
-        lblhoraactual.setForeground(new java.awt.Color(0, 102, 102));
+        lblhoraactual.setForeground(new java.awt.Color(204, 255, 255));
         lblhoraactual.setFont(new java.awt.Font("Roboto Light", 3, 17));
         add(lblhoraactual);
         

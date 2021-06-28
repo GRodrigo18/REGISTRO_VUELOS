@@ -2,93 +2,107 @@
 package VISTA;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import static java.awt.image.ImageObserver.WIDTH;
 import javax.swing.*;
-public class Menu extends JFrame{
-    JLabel fondo;
-    JMenuBar barra;
-    JMenu archivo, mantenimiento;   
-    JMenuItem salir, Boleta, registro;
+public class Menu extends JFrame implements ActionListener{
+
+    JPanel jpanel1,Jpanel2;
+    JLabel lbln1;
+    JButton btnregistrovuelo,btnsalir,btnminimizar;
     
+        
     public Menu(){
         initComponents();
         setLocationRelativeTo(null);
+        getContentPane().setLayout(null);
+        setUndecorated(true);
     }
     public void initComponents(){  
         
-        setSize(1000,900);
+        setSize(800,600);
         setTitle("REGISTRO DE VUELOS");
         setLayout(null); 
         
-        barra=new JMenuBar();
+        lbln1=new JLabel("Menú Principal");
+        lbln1.setFont(new java.awt.Font("Sitka Subheading", 1, 30)); // NOI18N
+        lbln1.setForeground(new java.awt.Color(0, 0, 0));
+        lbln1.setBounds(10,4,400,60);
+        add(lbln1);
         
-        archivo=new JMenu(); 
-        mantenimiento=new JMenu();
+        btnregistrovuelo=new JButton("Registro");
+        btnregistrovuelo.setBounds(50, 150, 200,200);
+        btnregistrovuelo.setBackground(new java.awt.Color(102, 153, 255));
+        btnregistrovuelo.setIcon(new ImageIcon("src\\IMAGENES\\registro.png"));
+        btnregistrovuelo.setFont(new java.awt.Font("Roboto Light", 3, 18));
+        add(btnregistrovuelo);
         
-        salir=new JMenuItem();  
-        Boleta=new JMenuItem();
-        registro=new JMenuItem();
-          
-        archivo.setText(" ARCHIVO ");
-        
-        fondo=new JLabel();
-        fondo.setIcon(new ImageIcon("C:\\Users\\bgrad\\OneDrive\\Documentos\\NETBEANS\\REGISTRO_VUELOS\\REGISTRO_VUELOS\\src\\IMAGENES\\fondo.jpg"));
-        fondo.setBounds(00, -20, 950, 900);
-        add(fondo);
-                
-        salir.setText("Salir");
-        salir.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e)
-                {
-                    salir();
-                }
+        btnminimizar=new JButton();
+        btnminimizar.setOpaque(false);
+        btnminimizar.setContentAreaFilled(false);
+        btnminimizar.setBorderPainted(false);
+        btnminimizar.setIcon(new ImageIcon("src\\IMAGENES\\minimi.png"));
+        btnminimizar.setBounds(650, 3, 62, 61);
+        btnminimizar.addActionListener(this);
+        btnminimizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnminimizarMouseClicked(evt);
+            }
+            private void btnminimizarMouseClicked(MouseEvent evt) {
+                this.setState(JFrame.ICONIFIED);
+            }
+            private void setState(int ICONIFIED) {
+                setExtendedState(WIDTH);
+            }
         });
-        add(salir);       
+        add(btnminimizar);
         
-        mantenimiento.setText(" MANTENIMIENTO ");
+        btnsalir=new JButton();
+        btnsalir.setOpaque(false);
+        btnsalir.setContentAreaFilled(false);
+        btnsalir.setBorderPainted(false);
+        btnsalir.setIcon(new ImageIcon("src\\IMAGENES\\cerrar.png"));
+        btnsalir.setBounds(725, 3, 62, 61);
+        btnsalir.addActionListener(this);
+        add(btnsalir);
+         
+        jpanel1=new JPanel();
+        jpanel1.setBackground(new java.awt.Color(82, 179, 217));
+        jpanel1.setBounds(0, 0, 800, 70);
+        add(jpanel1);
         
-        Boleta.setText("Boleta");
-        Boleta.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e)
-                {
-                  archivo();
-                }
-        });
-        add(Boleta); 
-            
-        registro.setText("Registro");
-        registro.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e)
-                {
-                  mantem();
-                }
-        });
-        add(registro); 
-        
-        archivo.add(salir);
-        mantenimiento.add(registro);
-        mantenimiento.add(Boleta);
-        
-        barra.add(archivo);
-        barra.add(mantenimiento);
-        setJMenuBar(barra);    
+        Jpanel2=new JPanel();
+        Jpanel2.setBackground(new java.awt.Color(58, 83, 155));
+        Jpanel2.setBounds(0, 60, 800, 800);
+        add(Jpanel2);
+         
     }
     public static void main(String[] args) {
          Menu principal = new Menu();
               principal.setVisible(true);
     }
-    public void salir()
-     {
-         dispose();
-     }
-    public void mantem(){
-       frm_Registro_vuelo principalA=new frm_Registro_vuelo();
-                principalA.setLocationRelativeTo(null);
-                principalA.setVisible(true);
+    
+    
+    public void Salir()
+    {
+        this.dispose();
     }
-      
-    public void archivo(){
-       frm_Boleta principalL=new frm_Boleta();
-              principalL.setLocationRelativeTo(null);
-              principalL.setVisible(true);
+    public void registrovuelo()
+    {
+        frm_Registro_vuelo rgv=new frm_Registro_vuelo();
+        rgv.setVisible(true);
+        rgv.dispose();
+    }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+          if (e.getSource()== btnregistrovuelo)
+         {
+             registrovuelo();
+         }
+         if (e.getSource()== btnsalir)
+         {
+             Salir();
+         }
+
     }
 }
