@@ -35,6 +35,7 @@ public class Menu extends JFrame implements ActionListener{
         btnregistrovuelo.setBackground(new java.awt.Color(102, 153, 255));
         btnregistrovuelo.setIcon(new ImageIcon("src\\IMAGENES\\registro.png"));
         btnregistrovuelo.setFont(new java.awt.Font("Roboto Light", 3, 18));
+        btnregistrovuelo.addActionListener(this);
         add(btnregistrovuelo);
         
         btnminimizar=new JButton();
@@ -91,7 +92,6 @@ public class Menu extends JFrame implements ActionListener{
     {
         frm_Registro_vuelo rgv=new frm_Registro_vuelo();
         rgv.setVisible(true);
-        rgv.dispose();
     }
     @Override
     public void actionPerformed(ActionEvent e) {
