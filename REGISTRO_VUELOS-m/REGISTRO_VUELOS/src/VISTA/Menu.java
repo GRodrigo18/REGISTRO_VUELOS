@@ -9,7 +9,7 @@ public class Menu extends JFrame implements ActionListener{
 
     JPanel jpanel1,Jpanel2;
     JLabel lbln1;
-    JButton btnregistrovuelo,btnsalir,btnminimizar;
+    JButton btnregistrovuelo,btnEquipaje,btnsalir,btnminimizar;
     
         
     public Menu(){
@@ -35,8 +35,23 @@ public class Menu extends JFrame implements ActionListener{
         btnregistrovuelo.setBackground(new java.awt.Color(102, 153, 255));
         btnregistrovuelo.setIcon(new ImageIcon("src\\IMAGENES\\registro.png"));
         btnregistrovuelo.setFont(new java.awt.Font("Roboto Light", 3, 18));
-        btnregistrovuelo.addActionListener(this);
         add(btnregistrovuelo);
+        
+        btnEquipaje=new JButton("Equipaje");
+        btnEquipaje.setBounds(300, 150, 200,200);
+        btnEquipaje.setBackground(new java.awt.Color(102, 153, 255));
+        btnEquipaje.setIcon(new ImageIcon("src\\IMAGENES\\registro.png"));
+        btnEquipaje.setFont(new java.awt.Font("Roboto Light", 3, 18));
+        btnEquipaje.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                Equipaje();
+            }
+        }
+        );
+        add(btnEquipaje);
         
         btnminimizar=new JButton();
         btnminimizar.setOpaque(false);
@@ -92,6 +107,11 @@ public class Menu extends JFrame implements ActionListener{
     {
         frm_Registro_vuelo rgv=new frm_Registro_vuelo();
         rgv.setVisible(true);
+    }
+    public void Equipaje()
+    {
+        frm_Maleta eq=new frm_Maleta();
+        eq.setVisible(true);
     }
     @Override
     public void actionPerformed(ActionEvent e) {

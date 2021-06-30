@@ -108,5 +108,5 @@ public class Cliente
 
     public void setFechretor(String fechretor) {
         this.fechretor = fechretor;
-    }
+    }   
 }

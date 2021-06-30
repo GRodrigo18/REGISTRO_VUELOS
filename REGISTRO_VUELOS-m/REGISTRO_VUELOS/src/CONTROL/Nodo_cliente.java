@@ -34,4 +34,7 @@ public class Nodo_cliente {
     public void setDer(Nodo_cliente der) {
         this.der = der;
     }
+    
+    
+    
 }
