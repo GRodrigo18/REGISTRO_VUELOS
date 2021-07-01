@@ -336,6 +336,7 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
         cbodestino.setFont(new java.awt.Font("Sitka Subheading", 3, 14));
         add(cbodestino);
         
+        
         Tbl_Datos=new JTable(ModTabla);
         barra=new JScrollPane();
         ModTabla=new DefaultTableModel(null,titulo);
@@ -623,18 +624,10 @@ public class frm_Registro_vuelo extends JFrame implements Runnable{
                 el modelo de la tabla y el nodo raiz
                                                                         */
         int fila = Tbl_Datos.getSelectedRow();
-        if (fila != -1)
+        if (fila!=-1)
         {
             String Cadena= ModTabla.getValueAt(fila, 0)+ " "+
-                           ModTabla.getValueAt(fila, 1)+ " "+
-                           ModTabla.getValueAt(fila, 2)+ " "+
-                           ModTabla.getValueAt(fila, 3)+ " "+
-                           ModTabla.getValueAt(fila, 4)+ " "+
-                           ModTabla.getValueAt(fila, 5)+ " "+
-                           ModTabla.getValueAt(fila, 6)+ " "+
-                           ModTabla.getValueAt(fila, 7)+ " "+
-                           ModTabla.getValueAt(fila, 8)+ " "+
-                           ModTabla.getValueAt(fila, 9)
+                           ModTabla.getValueAt(fila, 1)
                            ;
             objArbol.setRaiz(objArbol.Eliminar(objArbol.getRaiz(), Cadena));
             Limpiar_Tabla();
