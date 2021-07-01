@@ -25,22 +25,39 @@ public class Menu extends JFrame implements ActionListener{
         setLayout(null); 
         
         lbln1=new JLabel("Menú Principal");
-        lbln1.setFont(new java.awt.Font("Sitka Subheading", 1, 30)); // NOI18N
+        lbln1.setFont(new java.awt.Font("Sitka Subheading", 1, 40)); // NOI18N
         lbln1.setForeground(new java.awt.Color(0, 0, 0));
-        lbln1.setBounds(10,4,400,60);
+        lbln1.setBounds(25,4,400,60);
         add(lbln1);
         
         btnregistrovuelo=new JButton("Registro");
         btnregistrovuelo.setBounds(50, 150, 200,200);
-        btnregistrovuelo.setBackground(new java.awt.Color(102, 153, 255));
-        btnregistrovuelo.setIcon(new ImageIcon("src\\IMAGENES\\registro.png"));
-        btnregistrovuelo.setFont(new java.awt.Font("Roboto Light", 3, 18));
+        btnregistrovuelo.setForeground(new java.awt.Color(255, 255, 255));
+        btnregistrovuelo.setContentAreaFilled(false);
+        btnregistrovuelo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnregistrovuelo.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnregistrovuelo.setBorder(null);
+        btnregistrovuelo.setIcon(new ImageIcon("src\\IMAGENES\\registrarse .png"));
+        btnregistrovuelo.setFont(new java.awt.Font("Roboto Light", 3, 20));
+        btnregistrovuelo.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                registrovuelo();
+            }
+        }
+        );
         add(btnregistrovuelo);
         
         btnEquipaje=new JButton("Equipaje");
         btnEquipaje.setBounds(300, 150, 200,200);
-        btnEquipaje.setBackground(new java.awt.Color(102, 153, 255));
-        btnEquipaje.setIcon(new ImageIcon("src\\IMAGENES\\registro.png"));
+        btnEquipaje.setForeground(new java.awt.Color(255, 255, 255));
+        btnEquipaje.setContentAreaFilled(false);
+        btnEquipaje.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnEquipaje.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnEquipaje.setBorder(null);
+        btnEquipaje.setIcon(new ImageIcon("src\\IMAGENES\\equipaje.png"));
         btnEquipaje.setFont(new java.awt.Font("Roboto Light", 3, 18));
         btnEquipaje.addActionListener(new ActionListener()
         {
@@ -115,10 +132,7 @@ public class Menu extends JFrame implements ActionListener{
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-          if (e.getSource()== btnregistrovuelo)
-         {
-             registrovuelo();
-         }
+
          if (e.getSource()== btnsalir)
          {
              Salir();
