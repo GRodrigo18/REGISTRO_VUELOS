@@ -466,7 +466,7 @@ public class frm_Maleta extends JFrame
                 p=Double.parseDouble(Tbl_Datos.getValueAt(i,4).toString());
                 t+=p;
             }
-            JOptionPane.showMessageDialog(null,"El total es: S/"+t);
+            JOptionPane.showMessageDialog(null,"El total es:"+t);
         }
         
     }

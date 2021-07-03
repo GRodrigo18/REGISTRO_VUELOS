@@ -1,9 +1,10 @@
  
 package MODELO;
+
 public class Cliente 
 {
      public String Tipodocu,numdocu,pasaporte,nombres,apellidos,sexo,origen,destino;
-     public String fechasalida,fecharetorno;
+     public String fechsali,fechretor;
      
    public Cliente(Object[] Registro)
    {
@@ -15,13 +16,13 @@ public class Cliente
        this.sexo=Registro[5].toString();
        this.origen=Registro[6].toString();
        this.destino=Registro[7].toString();
-       this.fechasalida=Registro[8].toString();
-       this.fecharetorno=Registro[9].toString();
+       this.fechsali=Registro[8].toString();
+       this.fechretor=Registro[9].toString();
    }
    public Object[] getRegistro()
    {
        Object[]Registro={Tipodocu,numdocu,pasaporte,nombres,apellidos,sexo,
-                            origen,destino,fechasalida,fecharetorno};
+                            origen,destino,fechsali,fechretor};
        return Registro;
    }
    public String getNombreCompleto() 
@@ -94,19 +95,18 @@ public class Cliente
     }
 
     public String getFechsali() {
-        return fechasalida;
+        return fechsali;
     }
 
     public void setFechsali(String fechsali) {
-        this.fechasalida = fechsali;
+        this.fechsali = fechsali;
     }
 
     public String getFechretor() {
-        return fecharetorno;
+        return fechretor;
     }
 
     public void setFechretor(String fechretor) {
-        this.fecharetorno = fechretor;
+        this.fechretor = fechretor;
     }   
- 
 }

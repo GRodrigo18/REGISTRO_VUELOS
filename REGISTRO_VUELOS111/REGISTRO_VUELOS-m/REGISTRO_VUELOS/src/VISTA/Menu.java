@@ -3,15 +3,14 @@ package VISTA;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
-import static java.awt.image.ImageObserver.WIDTH;
 import javax.swing.*;
 public class Menu extends JFrame implements ActionListener{
 
     JPanel jpanel1,Jpanel2;
     JLabel lbln1;
-    JButton btnregistrovuelo,btnEquipaje,btnsalir,btnminimizar;
+    JButton btnregistrovuelo,btnEquipaje,btnsalir,btnminimizar,
+            btnvuelosdisponibles;
     
-        
     public Menu(){
         initComponents();
         setLocationRelativeTo(null);
@@ -69,6 +68,26 @@ public class Menu extends JFrame implements ActionListener{
         }
         );
         add(btnEquipaje);
+        
+        btnvuelosdisponibles=new JButton("Vuelos Disponibles");
+        btnvuelosdisponibles.setBounds(550, 150, 200,200);
+        btnvuelosdisponibles.setForeground(new java.awt.Color(255, 255, 255));
+        btnvuelosdisponibles.setContentAreaFilled(false);
+        btnvuelosdisponibles.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnvuelosdisponibles.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnvuelosdisponibles.setBorder(null);
+        btnvuelosdisponibles.setIcon(new ImageIcon("src\\IMAGENES\\avion (1).png"));
+        btnvuelosdisponibles.setFont(new java.awt.Font("Roboto Light", 3, 18));
+        btnvuelosdisponibles.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                 vuelosdispo();
+            }
+        }
+        );
+        add(btnvuelosdisponibles);
         
         btnminimizar=new JButton();
         btnminimizar.setOpaque(false);
@@ -130,6 +149,12 @@ public class Menu extends JFrame implements ActionListener{
         frm_Maleta eq=new frm_Maleta();
         eq.setVisible(true);
     }
+    public void vuelosdispo()
+    {
+        frm_Viajes vd=new frm_Viajes();
+        vd.setVisible(true);
+    }
+    
     @Override
     public void actionPerformed(ActionEvent e) {
 
